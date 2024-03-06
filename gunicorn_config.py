@@ -1,6 +1,6 @@
 import multiprocessing
 
-bind = "0.0.0.0:8080"  # Adjust the host and port as needed
+bind = "0.0.0.0:5000"  # Adjust the host and port as needed
 workers = multiprocessing.cpu_count() * 2 + 1
 threads = 2
 
