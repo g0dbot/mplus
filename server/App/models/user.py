@@ -12,7 +12,8 @@ class User(db.Model):
     firstName = db.Column(db.String(64), nullable=False)
     lastName = db.Column(db.String(64), nullable=False)
     password = db.Column(db.String(120), nullable=False)
-        
+
+    #assumption made that system does not require additional contact details
     #faculty/dept info
     #faculty
     #department
