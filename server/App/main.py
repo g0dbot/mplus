@@ -8,10 +8,10 @@ from datetime import timedelta
 from App.database import init_db
 from App.config import config
 
-"""from App.controllers import (
+from App.controllers import (
     setup_jwt,
-    add_auth_context
-)"""
+    #add_auth_context
+)
 
 """from App.views import views
 
@@ -44,12 +44,12 @@ def create_app(config_overrides={}):
     #configure_uploads(app, photos)
     #add_views(app)
     init_db(app)
-    #jwt = setup_jwt(app)
+    jwt = setup_jwt(app)
     
-    """@jwt.invalid_token_loader
+    @jwt.invalid_token_loader
     @jwt.unauthorized_loader
     def custom_unauthorized_response(error):
-        return render_template('401.html', error=error), 401"""
+        return render_template('401.html', error=error), 401
     
     app.app_context().push()
     return app
