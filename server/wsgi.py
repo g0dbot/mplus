@@ -4,3 +4,4 @@ from App.main import create_app
 
 app = create_app()
 migrate = get_migrate(app)
+#basic
