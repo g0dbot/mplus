@@ -4,8 +4,25 @@ from App.database import db
 
 class User(db.Model):
     id = db.Column(db.String(36), default=str(uuid.uuid4()), primary_key=True)
-    username =  db.Column(db.String, nullable=False, unique=True)
+    #need a usertype
+
+    #user details
+    username =  db.Column(db.String, nullable=False, unique=True) #using this as staff/student ID
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    firstName = db.Column(db.String(64), nullable=False)
+    lastName = db.Column(db.String(64), nullable=False)
     password = db.Column(db.String(120), nullable=False)
+        
+    #faculty/dept info
+    #faculty
+    #department
+    #campus
+
+    #house
+    
+    
+    
+    
 
     def __init__(self, username, password):
         self.username = username
@@ -24,3 +41,6 @@ class User(db.Model):
     def check_password(self, password):
         """Check hashed password."""
         return check_password_hash(self.password, password)
+
+class UserType(db.Model):
+    pass
